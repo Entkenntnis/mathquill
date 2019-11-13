@@ -34,6 +34,6 @@ Controller.open(function(_) {
         else return;
       }
     }
-    this.root.jQ.stop().animate({ scrollLeft: '+=' + scrollBy}, 100);
+    //this.root.jQ.stop().animate({ scrollLeft: '+=' + scrollBy}, 100);
   };
 });
