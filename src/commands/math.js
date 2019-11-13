@@ -440,6 +440,7 @@ var MathBlock = P(MathElement, function(_, super_) {
       var html;
       if (ch === '<') html = '&lt;';
       else if (ch === '>') html = '&gt;';
+      else if (ch === ' ') html = '&nbsp';
       return VanillaSymbol(ch, html)
     }
     // exclude f because it gets a dedicated command with more spacing
