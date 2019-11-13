@@ -203,6 +203,10 @@ function getInterface(v) {
     };
     _.moveToLeftEnd = function() { return this.moveToDirEnd(L); };
     _.moveToRightEnd = function() { return this.moveToDirEnd(R); };
+    
+    _.cursorDepth = function() {
+      return this.__controller.cursor.depth()
+    }
 
     _.keystroke = function(keys) {
       var keys = keys.replace(/^\s+|\s+$/g, '').split(/\s+/);
