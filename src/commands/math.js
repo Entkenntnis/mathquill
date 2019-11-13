@@ -436,6 +436,12 @@ var MathBlock = P(MathElement, function(_, super_) {
   };
   _.chToCmd = function(ch, options) {
     var cons;
+    if (options.textMode) {
+      var html;
+      if (ch === '<') html = '&lt;';
+      else if (ch === '>') html = '&gt;';
+      return VanillaSymbol(ch, html)
+    }
     // exclude f because it gets a dedicated command with more spacing
     if (ch.match(/^[a-eg-zA-Z]$/))
       return Letter(ch);
